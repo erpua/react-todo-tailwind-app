@@ -1,3 +1,18 @@
+# configs ( https://www.youtube.com/watch?v=siTUv1L9ymM )
+
+- install VSCode extention => Tailwind CSS IntelliSense / Code Runner / ESLint / Material Icon Theme
+
+- npm create vite@latest react-todo-app
+- cd react-todo-app
+- npm install
+- npm install -D tailwindcss@3 ( https://v3.tailwindcss.com/docs/installation version of 3.4.1 )
+- npx tailwindcss init ( creates tailwind.config.js file in the main root )
+- npm install react-scripts@latest --force
+- npm install tailwindcss postcss autoprefixer@^9.8.6 --force
+- npx tailwindcss init -p
+- 
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
