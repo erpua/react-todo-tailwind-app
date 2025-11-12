@@ -1,3 +1,4 @@
+- 51
 # configs ( https://www.youtube.com/watch?v=siTUv1L9ymM )
 
 - install VSCode extention => Tailwind CSS IntelliSense / Code Runner / ESLint / Material Icon Theme
@@ -10,7 +11,7 @@
 - npm install react-scripts@latest --force
 - npm install tailwindcss postcss autoprefixer@^9.8.6 --force
 - npx tailwindcss init -p
-- 
+- npm i lucide-react --force ( icon package )
 
 
 # React + TypeScript + Vite
