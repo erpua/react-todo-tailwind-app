@@ -1,4 +1,6 @@
-- 51
+ 
+-
+
 # configs ( https://www.youtube.com/watch?v=siTUv1L9ymM )
 
 - install VSCode extention => Tailwind CSS IntelliSense / Code Runner / ESLint / Material Icon Theme
