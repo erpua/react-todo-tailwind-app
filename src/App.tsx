@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { dummyData } from "./data/todos";
-// import TodoItem from "./componets/TodoItem";
 import AddTodoform from "./componets/AddTodoForm";
 import TodoList from "./componets/TodoList";
+import TodoSummary from "./componets/TodoSummary";
 
 export default function App() {
 
@@ -22,16 +22,22 @@ export default function App() {
   function addTodo(title: string){
     setTodos(previousTodos => [
       {
-        id:previousTodos.length + 1,
+       // id:previousTodos.length + 1, /* deletes wrong todo when we are repeating same id */ 
+        id: Date.now(),
         title, // title: title,
         completed: false
       },
       ...previousTodos
+      
     ])
   };
 
   function deleteTodo (id: number) {
     setTodos(previousTodos => previousTodos.filter(todo => todo.id !== id ));
+  };
+
+  function deleteAllCompletedTodos () {
+    setTodos(prevTodos => prevTodos.filter(todo => !todo.completed));
   };
 
   return (
@@ -48,6 +54,10 @@ export default function App() {
             onDelete={deleteTodo}
           />
         </div>
+        <TodoSummary 
+          todos={todos}
+          deleteAllCompleted={deleteAllCompletedTodos}
+        />
       </main>
     </>
   )

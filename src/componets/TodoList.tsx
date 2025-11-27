@@ -25,24 +25,21 @@ export default function TodoList({
 
   return(
     <>
-    <div style={{border:"1px dotted red"}} className="space-y-2 p-3">
-      {todosSorted.map((todo) => (
-        <TodoItem 
-          key={todo.id}
-          todo={todo}
-          onCompletedChange={onCompletedChange}
-          onDelete={onDelete}
-        />
-      ))}
-    </div>
-    {todos.length === 0 && (
-      <p 
-        className="text-center text-sm"
-      >
-        No todos yet. Add a new one.
-      </p>
-    )}
+      <div className="space-y-2 p-3 border border-dotted border-red-500">
+        {todosSorted.map((todo) => (
+          <TodoItem 
+            key={todo.id}
+            todo={todo}
+            onCompletedChange={onCompletedChange}
+            onDelete={onDelete}
+          />
+        ))}
+      </div>
+      {todos.length === 0 && (
+        <p className="text-center text-sm text-gray-500">
+          No todos yet. Add a new one.
+        </p>
+      )}
     </>
-  
   )
 };
